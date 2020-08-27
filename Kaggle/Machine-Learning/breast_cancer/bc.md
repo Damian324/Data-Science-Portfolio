@@ -1254,7 +1254,7 @@ knn_model
 ```
 
 
-#### Accuracy: 0.9487592 con mejor k = 3
+#### Accuracy: 0.9765781 con mejor k = 3
 
 #### Probar el modelo con el test set:
 
@@ -1515,4 +1515,4 @@ fourfoldplot(xgb_acc_plot$table, color = col_acc, conf.level = 0, margin = 1, ma
 ![](bc_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
 
 
-#### Los modelos con mejor poder de prediccion entonces son el SVM y XGBOOST! Los graficos se leen de la siguiente manera, en la parte arriba a la izquierda de cada grafico, se juntan las observaciones reales de tumores benignos, y se lo compara con la prediccion de nuestro modelo. Debajo de eso, las observaciones que el modelo predijo incorrectamente como benigna cuando realmente era maligna, y lo mismo del otro lado pero al reves!
+#### Los modelos con mejor poder de prediccion entonces son el SVM y XGBOOST! Los graficos se leen de la siguiente manera, en la parte arriba a la izquierda de cada grafico, el numero representa las observaciones reales de tumores benignos, y se lo compara con las observaciones correctamente predichas con nuestro modelo. Debajo de eso, las observaciones que el modelo predijo erroneamente como benigna cuando realmente era maligna, y lo mismo del otro lado pero al reves!
