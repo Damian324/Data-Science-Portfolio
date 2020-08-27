@@ -61,7 +61,7 @@ str(admissions)
 ##  $ Chance.of.Admit  : num  0.92 0.76 0.72 0.8 0.65 0.9 0.75 0.68 0.5 0.45 ...
 ```
 
-####Manipulacion leve de algunos datos
+#### Manipulacion leve de algunos datos
 
 
 ```r
@@ -87,9 +87,9 @@ sapply(admissions,function(x) sum(is.na(x)))
 #No hay datos NA
 ```
 
-#__Parte 1:__
+# __Parte 1:__
 
-####Comencemos entonces analizando la posibilidad de que existan valores atipicos (outliers) en nuestra data. Se considera outlier aquel dato que se encuentre 1.5 IQR por debajo del primer cuartil (Q1) o por encima del tercer cuartil (Q3).Lo veremos con graficos boxplots para apreciar la visualizacion:
+#### Comencemos entonces analizando la posibilidad de que existan valores atipicos (outliers) en nuestra data. Se considera outlier aquel dato que se encuentre 1.5 IQR por debajo del primer cuartil (Q1) o por encima del tercer cuartil (Q3).Lo veremos con graficos boxplots para apreciar la visualizacion:
 
 
 ```r
@@ -155,7 +155,7 @@ boxplot(admissions$Chance.of.Admit)#POSIBILIDAD DE ADMISION,Se detectaron 2 outl
 
 ![](graduate_nb_files/figure-html/unnamed-chunk-4-7.png)<!-- -->
 
-####Eliminar outliers, dado a que solamente son el 0.6% de nuestra data total
+#### Eliminar outliers, dado a que solamente son el 0.6% de nuestra data total
 
 
 ```r
@@ -163,7 +163,7 @@ admissions <- admissions %>%
   filter(LOR > 1, Chance.of.Admit > 0.34)
 ```
 
-####Estudiemos la relacion entre las variables independientes(GRE,TEOFL,UNIVERSITY RANKING,SOP,LOR,CGPA,RESEARCH) y la variable dependiente (Chance of admit).
+#### Estudiemos la relacion entre las variables independientes(GRE,TEOFL,UNIVERSITY RANKING,SOP,LOR,CGPA,RESEARCH) y la variable dependiente (Chance of admit).
 
 En este primer grafico veremos un resumen de las relaciones:
 
@@ -184,9 +184,9 @@ ggpairs(admissions,progress = FALSE)
 
 ![](graduate_nb_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
-####Miremos en mejor detalle abajo las relaciones lineales entre las variables continuas con la dependiente:
+#### Miremos en mejor detalle abajo las relaciones lineales entre las variables continuas con la dependiente:
 
-#####Podemos observar una relacion positiva medianamente fuerte entre las variables contiuas GRE,TOEFL,y CGPA con la variable dependiente Chance of admission (Posibilidad de admision). Con los datos disponibles entonces veemos que mientras mayor sea el GRE SCORE, mayor sera la posibilidad de ser admitido al programa de posgrado, y lo mismo ocurre con TOEFL, y CGPA.
+##### Podemos observar una relacion positiva medianamente fuerte entre las variables contiuas GRE,TOEFL,y CGPA con la variable dependiente Chance of admission (Posibilidad de admision). Con los datos disponibles entonces veemos que mientras mayor sea el GRE SCORE, mayor sera la posibilidad de ser admitido al programa de posgrado, y lo mismo ocurre con TOEFL, y CGPA.
 
 
 ```r
@@ -207,9 +207,9 @@ plot(admissions$CGPA,admissions$Chance.of.Admit)
 
 ![](graduate_nb_files/figure-html/unnamed-chunk-7-3.png)<!-- -->
 
-####Estudiemos las variables categoricas y su relacion con la variable dependiente. El eje Y siempre siendo la variable dependiente (Posibilidad de admision).
+#### Estudiemos las variables categoricas y su relacion con la variable dependiente. El eje Y siempre siendo la variable dependiente (Posibilidad de admision).
 
-####Vemos que en cada instancia, mientras mayor sea el valor de las variables discretas, mayor la posibilidad de ingreso.
+#### Vemos que en cada instancia, mientras mayor sea el valor de las variables discretas, mayor la posibilidad de ingreso.
 
 
 ```r
@@ -237,7 +237,7 @@ plot(admissions$Research,admissions$Chance.of.Admit)#RESEARCH
 
 ![](graduate_nb_files/figure-html/unnamed-chunk-8-4.png)<!-- -->
 
-####Estudiemos la correlacion entre las variables independiente y variable dependiente:
+#### Estudiemos la correlacion entre las variables independiente y variable dependiente:
 
 GRE,TOEFL,CGPA Correlacion fuerte entre variable dependiente y entre si mismas.
 
@@ -266,7 +266,7 @@ cor(admissions[-7])
 ## CGPA              0.6311882 1.0000000       0.8831215
 ## Chance.of.Admit   0.6411145 0.8831215       1.0000000
 ```
-####Antes de comenzar a armar los modelos, es necesario llevar a la misma escala a los datos, que tomaran un valor entre 0 y 1, manteniendo su peso. 
+#### Antes de comenzar a armar los modelos, es necesario llevar a la misma escala a los datos, que tomaran un valor entre 0 y 1, manteniendo su peso. 
 
 
 #### Formula: x - x minimum/x max - x min
@@ -320,7 +320,7 @@ head(admissions, n = 10)
 ```
 
 
-####Dividamos en 3 partes al dataset. Uno para entrenar el modelo, uno para validar y comparar modelos, y el ultimo para testear la exactitud final del modelo seleccionado.
+#### Dividamos en 3 partes al dataset. Uno para entrenar el modelo, uno para validar y comparar modelos, y el ultimo para testear la exactitud final del modelo seleccionado.
 
 
 ```r
@@ -341,7 +341,7 @@ train_set <- train_set[-val_index,]
 test_set <- admissions[-train_index,]
 ```
 
-#__Parte 2:__
+# __Parte 2:__
 
 Comparasion entre 2 modelos, el primero lo hare con las variables independientes mas correlacionadas con la variable dependiente(chance of admit)  
 El segundo modelo utilizara todas las variables.  
@@ -406,7 +406,7 @@ summary(model_1)
 ## F-statistic: 378.6 on 3 and 314 DF,  p-value: < 2.2e-16
 ```
 
-####Prueba de multicolinealidad (La multicolinealidad es la relación de dependencia lineal fuerte entre más de dos variables explicativas en una regresión múltiple, su presencia puede causar un modelo ineficaz.)
+#### Prueba de multicolinealidad (La multicolinealidad es la relación de dependencia lineal fuerte entre más de dos variables explicativas en una regresión múltiple, su presencia puede causar un modelo ineficaz.)
 
 No hay evidencia de la presencia de multicolinealidad excesiva. 
 
@@ -418,9 +418,9 @@ vif(model_1)
 ##      GRE    TOEFL     CGPA 
 ## 3.933115 3.613360 3.548364
 ```
-####RMSE test del modelo 1 en nuestro set de validacion
+#### RMSE test del modelo 1 en nuestro set de validacion
 
-####RMSE es una medida de uso frecuente de las diferencias entre los valores predichos por un modelo o un estimador y los valores observados. Mientras menos sea el valor del RMSE, mejor habilidad predictiva tiene nuestro modelo.
+#### RMSE es una medida de uso frecuente de las diferencias entre los valores predichos por un modelo o un estimador y los valores observados. Mientras menos sea el valor del RMSE, mejor habilidad predictiva tiene nuestro modelo.
 
 
 ```r
@@ -441,7 +441,7 @@ val_set$model_1 <- predict(model_1,newdata=val_set)
 ```
 
 
-####Grafico modelo 1
+#### Grafico modelo 1
 
 ```r
 ggplot(val_set,aes(x = model_1, y = ADMIT))+
@@ -455,7 +455,7 @@ ggplot(val_set,aes(x = model_1, y = ADMIT))+
 
 ![](graduate_nb_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
-####Modelo 2, utilizando todas las variables
+#### Modelo 2, utilizando todas las variables
 
 Observaciones:  
 -UNI, Y SOP no son significantes.  
@@ -531,7 +531,7 @@ summary(model_2)
 ## Multiple R-squared:  0.7998,	Adjusted R-squared:  0.7953 
 ## F-statistic:   177 on 7 and 310 DF,  p-value: < 2.2e-16
 ```
-####No hay evidencia de multicolinealidad
+#### No hay evidencia de multicolinealidad
 
 
 ```r
@@ -544,9 +544,9 @@ vif(model_2)
 ```
 
 
-####Estudiemos la posibilidad de eliminar variables que no aporten a nuestro modelo. Realizaremos un test anova en distintos escenario con distintos modelos.  
+#### Estudiemos la posibilidad de eliminar variables que no aporten a nuestro modelo. Realizaremos un test anova en distintos escenario con distintos modelos.  
 
-#####Al hacer un test anova con modelos sin las variables TEOFL,SOP, ni UNIVERISTY RATING(UNI), vemos que el test anova nos retorna un valor significante, que significa que esas tres variable juntas SI aportan a nuestro modelo. Sin embargo, el mismo test con el modelo sin la variable SOP, nos dice que esta variable realmente no nos contribuye en nada. Mas abajo vemos que incluso al eliminar la variable SOP, nuestro R2 mejora.
+##### Al hacer un test anova con modelos sin las variables TEOFL,SOP, ni UNIVERISTY RATING(UNI), vemos que el test anova nos retorna un valor significante, que significa que esas tres variable juntas SI aportan a nuestro modelo. Sin embargo, el mismo test con el modelo sin la variable SOP, nos dice que esta variable realmente no nos contribuye en nada. Mas abajo vemos que incluso al eliminar la variable SOP, nuestro R2 mejora.
 
 ```r
 model_drop_uni_sop_teo <- lm(ADMIT ~ GRE + CGPA + LOR + RESEARCH,data = train_set)
@@ -639,7 +639,7 @@ anova(model_drop_uni_teo,model_2)# p-value significante, eliminar uni y teo afec
 ```r
 #Drop la variable SOP
 ```
-####Modelo 2 sin SOP tiene un R2 = 0.7957, un poco mejor que antes.
+#### Modelo 2 sin SOP tiene un R2 = 0.7957, un poco mejor que antes.
 
 ```r
 summary(model_drop_sop)
@@ -675,7 +675,7 @@ summary(model_drop_sop)
 ```r
 model_2_final <- model_drop_sop
 ```
-####RMSE test del modelo 2 en nuestro set de validacion
+#### RMSE test del modelo 2 en nuestro set de validacion
 
 ```r
 val_set$model_2 <- predict(model_2_final,newdata=val_set)
@@ -692,10 +692,10 @@ val_set$model_2 <- predict(model_2_final,newdata=val_set)
 #R2 = 0.7957
 ```
 
-####El segundo modelo nos dio un RMSE menor al modelo 1, como tambien un R2 mejor.  
-####El segundo modelo entonces es mejor con un RMSE de 0.0610645 y un R2 de 0.7957.
+#### El segundo modelo nos dio un RMSE menor al modelo 1, como tambien un R2 mejor.  
+#### El segundo modelo entonces es mejor con un RMSE de 0.0610645 y un R2 de 0.7957.
 
-####Apliquemos el modelo entonces a nuestra test data, que en este analisis representaria data nunca antes vista y nos daria una idea de como se comportaria en "el mundo real":
+#### Apliquemos el modelo entonces a nuestra test data, que en este analisis representaria data nunca antes vista y nos daria una idea de como se comportaria en "el mundo real":
 
 
 ```r
@@ -708,7 +708,7 @@ test_set$model_2 <- predict(model_2_final,newdata=test_set)
 ## [1] 0.04547105
 ```
 
-####Un RMSE de 0.04547105, impecable! 
+#### Un RMSE de 0.04547105, impecable! 
 
 
 ```r
