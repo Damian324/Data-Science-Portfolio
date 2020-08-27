@@ -6,7 +6,7 @@ output:
 ---
 
 
-###Este conjunto de datos fue construido con el propósito de ayudar a los estudiantes en la preselección de universidades con sus perfiles. El resultado previsto les da una idea justa sobre sus posibilidades de admision para una universidad en particular.
+### Este conjunto de datos fue construido con el propósito de ayudar a los estudiantes en la preselección de universidades con sus perfiles. El resultado previsto les da una idea justa sobre sus posibilidades de admision para una universidad en particular.
 
 __Para este analisis, utilizaremos el dataset descargado desde Kaggle titulado "Graduate Admission 2". Este dataset nos brinde las siguientes columnas:__
 
