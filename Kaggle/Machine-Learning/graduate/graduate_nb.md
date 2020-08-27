@@ -343,7 +343,7 @@ test_set <- admissions[-train_index,]
 
 # __Parte 2:__
 
-Comparasion entre 2 modelos, el primero lo hare con las variables independientes mas correlacionadas con la variable dependiente(chance of admit)  
+Comparacion entre 2 modelos, el primero lo hare con las variables independientes mas correlacionadas con la variable dependiente(chance of admit)  
 El segundo modelo utilizara todas las variables.  
 model_1 : variables independientes: GRE,TOEFL,CGPA  
 model_2 : variables independientes - todas las variables en el dataset     
