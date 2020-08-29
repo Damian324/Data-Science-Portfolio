@@ -1,3 +1,3 @@
 # Leer primero
 
-Proyectos_propios/analisis de canasta de la compra/imagenes/imagen.jpg
+https://raw.githubusercontent.com/Damian324/Data-Science-Portfolio/master/Proyectos_propios/analisis%20de%20canasta%20
