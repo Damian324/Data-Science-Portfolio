@@ -17,11 +17,8 @@ Los datos que utilizaremos provienen de el sistema de punto de venta(POS) del cl
 
 Sin embargo existe una manera para ver la informacion de cada transaccion realizada. El tema es que esta informacion vienen en forma de PDF, y es el ticket particular emitido en cada transaccion. Dejo imagen ejemplar:
 
+<img src="https://raw.githubusercontent.com/Damian324/Data-Science-Portfolio/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/imagenes/ticket.jpg">
 
 Entonces tuve que desarrollar un script que logre extraer esta informacin de los tickets, y juntarlo todo en una tabla para realizar este analisis, ademas de muchos otros estudios posibles. 
 
 Mas detalles en este [link](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md) a la primer parte de este proyecto.
-
-
-
-<img width="400" height="400" src="https://raw.githubusercontent.com/Damian324/Data-Science-Portfolio/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/imagenes/imagen.jpg">
