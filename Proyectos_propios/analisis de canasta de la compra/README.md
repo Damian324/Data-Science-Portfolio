@@ -1,6 +1,6 @@
 ### Leer primero
 
-Este proyecto se utiliza en un negocio de caracter venta al por menor, en el cual requerian saber cuales productos se venden con cual otro, es decir, que productos resultan ser complementarios. IBM define el analisis de canasta(cesta) de la compra de la siguiente manera: "En el análisis de cesta de la compra, algoritmos inteligentes analizan enormes cantidades de datos transaccionales para poner de relieve “asociaciones” – patrones que muestran los vínculos entre productos que habitualmente se compran juntos."
+Este proyecto se utiliza en un negocio de caracter venta al por menor, en el cual se requiere saber cuales productos se venden con cual otro, es decir, que productos resultan ser complementarios. IBM define el analisis de canasta(cesta) de la compra de la siguiente manera: "En el análisis de cesta de la compra, algoritmos inteligentes analizan enormes cantidades de datos transaccionales para poner de relieve “asociaciones” – patrones que muestran los vínculos entre productos que habitualmente se compran juntos."
 
 El analisis se compone de 2 partes:
 
