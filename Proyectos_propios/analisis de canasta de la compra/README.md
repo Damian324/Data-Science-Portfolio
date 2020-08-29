@@ -22,3 +22,9 @@ Sin embargo existe una manera para ver la informacion de cada transaccion realiz
 Entonces tuve que desarrollar un script que logre extraer esta informacin de los tickets, y juntarlo todo en una tabla para realizar este analisis, ademas de muchos otros estudios posibles. 
 
 Mas detalles en este [link](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md) a la primer parte de este proyecto.
+
+#### Segunda Parte
+
+Una vez que logramos obtener la data necesaria para finalizar el analisis, la cargamos a [Python](https://www.python.org/) y ejecutamos los algoritmos que nos brindaran la informacion para lograr nuestro objetivo de este analisis.
+
+[Aqui](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/ejecucion_analisis_canasta.ipynb) se encuentra el script. 
