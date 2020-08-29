@@ -11,11 +11,16 @@ _Aclaracion: Para este analisis, dado al respeto de la privacidad los datos de m
 
 #### Primer Parte
 
-Esta primer parte del analisis se realizo con el software libre y gratuito R. Esta herramienta de programacion es sumamente util por distintias razones, incluyendo dandole estructura a datos no estructurados.
+Esta [primer](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md) parte del analisis se realizo con el software libre [R](https://www.r-project.org/). Esta herramienta de programacion es sumamente util por distintias razones, incluyendo dandole estructura a datos no estructurados.
 
 Los datos que utilizaremos provienen de el sistema de punto de venta(POS) del cliente. Una barrera a superar con la informacion exportada de este POS, es que los reportes de ventas que emite son acumulados, es decir, no identifica a cada venta en particular (no hay Ticket ID), ni discrimia por timestamp (fecha, y hora). 
 
 Sin embargo existe una manera para ver la informacion de cada transaccion realizada. El tema es que esta informacion vienen en forma de PDF, y es el ticket particular emitido en cada transaccion. Dejo imagen ejemplar:
+
+
+Entonces tuve que desarrollar un script que logre extraer esta informacin de los tickets, y juntarlo todo en una tabla para realizar este analisis, ademas de muchos otros estudios posibles. 
+
+Mas detalles en este [link](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md) a la primer parte de este proyecto.
 
 
 
