@@ -2,12 +2,11 @@
 
 ### LSV-Dashboard
 
-Mi cliente me pidio que se le armara unas aplicaciones donde pudiese ver sus ventas y otras estadisticas importante para su negocio. Tendra entonces la posibilidad de
-estudiar posibles oportunidades de negocio, observar debilidades, y en general tener una idea del monto de dinero que mueve dia a dia.
+Se me pidio que se armara unas aplicaciones donde se pudiese ver las ventas y otras estadisticas importantes del negocio. Los interesados tendrian entonces la posibilidad de estudiar posibles oportunidades de negocio, observar debilidades, y en general tener una idea del monto de dinero que mueve dia a dia.
 
-El cliente no tenia previamente instalado un punto de venta (POS) en su negocio, por lo cual nunca supo exactamente cuanto le ingresaba de dinero, ni cuanto vendia de cada producto.
+No habia previamente instalado un punto de venta (POS) en su negocio, por lo cual nunca se supo exactamente cuanto se ingresaba de dinero, ni cuanto se vendia de cada producto.
 
-Luego de haberle instalado un sistema POS en el negocio, con los datos provenientes de dicho POS, pude crear 2 Shiny web Apps, donde podra observar las 24hs la informacion que el buscaba.
+Luego de haber instalado un sistema POS en el negocio, con los datos provenientes de dicho POS, pude crear 2 Shiny web Apps, donde podra observar las 24hs la informacion que el buscaba.
 
 #### En practica, solo es necesario abrir el script Madre(Mother) porque en este script corren todos los otros scripts, incluso envia el orden de subir la aplicacion a la nube como ultimo orden. El script Madre es el "All-in-1 Solution".
   El orden cronologico entonces seria:
@@ -34,7 +33,7 @@ Luego de haberle instalado un sistema POS en el negocio, con los datos provenien
 <img alt="Outputs del script clusterizacion" src="https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/imagenes/clusterizacion.jpg">  
 
 3) Apps
-  * Por cuestiones de privacidad del cliente, los links a los shiny apps no estaran presentes en este documento. Sin embargo, los scripts si, ademas me han permitido a incluir fotos para mostrar aunque sea un pantallazo de lo que realmente son las apps.
+  * Por cuestiones de privacidad del negocio, los links a los shiny apps no estaran presentes en este documento. Sin embargo, los scripts si, ademas me han permitido a incluir fotos para mostrar aunque sea un pantallazo de lo que realmente son las apps.
   * El objetivo del [DASHBOARD](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/app_dashboard.R) es visualizar lo esencial del negocio. La informacion esta consolidada en un dashboard facil de enteder y visualizar. Dejo printscreen con explicaciones:
  <img src="https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/imagenes/app_dashboard_1.jpg">
  
@@ -44,7 +43,7 @@ Luego de haberle instalado un sistema POS en el negocio, con los datos provenien
   * Tab que se abre al hacer click sobre una categoria en particular:
  <img src="https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/imagenes/app_dashboard_cat.jpg">
  
-  * La segunda [APLICACION](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/app_almacen.R) entra en mas detalle, dependiendo de lo que quiera estudiar el cliete. Se divide en 6 "bloques" e incluye informacion como por ejemplo, de que productos aumentaron o bajaron en ventas, cual es el share de cada producto, seleccion de periodos especificos para analizar fechas flexibles, y otras funciones.
+  * La segunda [APLICACION](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/LSV-dashboard/app_almacen.R) entra en mas detalle, dependiendo de lo que se quiera estudiar. Se divide en 6 "bloques" e incluye informacion como por ejemplo, de que productos aumentaron o bajaron en ventas, cual es el share de cada producto, seleccion de periodos especificos para analizar fechas flexibles, y otras funciones.
   * Dejo abajo 2 bloques ejemplares:
   <img src="https://raw.githubusercontent.com/Damian324/Data-Science-Portfolio/master/Proyectos_propios/LSV-dashboard/imagenes/app_almacen_cat.jpg">
   <img src="https://raw.githubusercontent.com/Damian324/Data-Science-Portfolio/master/Proyectos_propios/LSV-dashboard/imagenes/app_almacen_dif.jpg">
