@@ -7,13 +7,13 @@ El analisis se compone de 2 partes:
 1) [Importacion,transformacion, y estructuracion de los datos](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md)
 2) [Analisis de canasta de la compra](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/ejecucion_analisis_canasta.ipynb)
 
-_Aclaracion: Para este analisis, dado al respeto de la privacidad los datos de mi cliente, y con su autorizacion,solo se uso una muestra pequeña de dos dias de trabajo, de solo una caja._
+_Aclaracion: Para este analisis, dado al respeto de la privacidad del negocio, y con su autorizacion,solo se uso una muestra pequeña de dos dias de trabajo, de solo una caja._
 
 #### Primer Parte
 
 Esta [primer](https://github.com/Damian324/Data-Science-Portfolio/blob/master/Proyectos_propios/analisis%20de%20canasta%20de%20la%20compra/canasta_github.md) parte del analisis se realizo con el software libre [R](https://www.r-project.org/). Esta herramienta de programacion es sumamente util por distintias razones, incluyendo dandole estructura a datos no estructurados.
 
-Los datos que utilizaremos provienen de el sistema de punto de venta(POS) del cliente. Una barrera a superar con la informacion exportada de este POS, es que los reportes de ventas que emite son acumulados, es decir, no identifica a cada venta en particular (no hay Ticket ID), ni discrimia por timestamp (fecha, y hora). 
+Los datos que utilizaremos provienen de el sistema de punto de venta(POS). Una barrera a superar con la informacion exportada de este POS, es que los reportes de ventas que emite son acumulados, es decir, no identifica a cada venta en particular (no hay Ticket ID), ni discrimia por timestamp (fecha, y hora). 
 
 Sin embargo existe una manera para ver la informacion de cada transaccion realizada. El tema es que esta informacion vienen en forma de PDF, y es el ticket particular emitido en cada transaccion. Dejo imagen ejemplar:
 
